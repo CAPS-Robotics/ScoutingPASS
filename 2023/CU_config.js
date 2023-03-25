@@ -78,17 +78,17 @@ var config_data = `
     {
       "name": "Scored high",
       "code": "sh",
-      "type": "counter"
+      "type": "bool"
     },
     {
       "name": "Scored middle",
       "code": "sm",
-      "type": "counter"
+      "type": "bool"
     },
     {
       "name": "Scored low",
       "code": "sl",
-      "type": "counter"
+      "type": "bool"
     },
     {
       "name": "Pieces scored",
@@ -174,7 +174,7 @@ var config_data = `
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 256
+      "maxSize": 2000
     }
   ]
 }`;
