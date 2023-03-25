@@ -48,24 +48,15 @@ var config_data = `
     }
   ],
   "auton": [
-    { "name": "Auto Scoring",
-      "code": "asg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true"
+    {
+      "name": "Cones scored",
+      "code": "aco",
+      "type": "counter"
     },
-    { "name": "Crossed Cable",
-      "code": "acc",
-      "type": "bool"
-    },
-    { "name": "Crossed Charging Station",
-      "code": "acs",
-      "type": "bool"
+    {
+      "name": "Cubes scored",
+      "code": "acu",
+      "type": "counter"
     },
     { "name": "Mobility?",
       "code": "am",
