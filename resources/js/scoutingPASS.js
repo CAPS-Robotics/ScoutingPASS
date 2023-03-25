@@ -188,6 +188,7 @@ function addCounter(table, idx, name, data) {
   button2.setAttribute("value", "+");
   cell2.appendChild(button2);
 
+  /*
   if (data.hasOwnProperty('cycleTimer')) {
     if (data.cycleTimer != "") {
       inp = document.createElement('input');
@@ -197,6 +198,7 @@ function addCounter(table, idx, name, data) {
       cell.appendChild(inp);
     }
   }
+  */
 
   if (data.hasOwnProperty('defaultValue')) {
     var def = document.createElement("input");

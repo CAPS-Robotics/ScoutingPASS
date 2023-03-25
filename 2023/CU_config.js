@@ -75,41 +75,35 @@ var config_data = `
     }
   ],
   "teleop": [
-    { "name": "Cycle Timer",
-      "code": "tct",
-      "type": "cycle"
+    {
+      "name": "Scored high",
+      "code": "sh",
+      "type": "counter"
     },
-    { "name": "Grid Scoring",
-      "code": "tsg",
-      "type": "clickable_image",
-      "filename": "2023/grid_image.png",
-      "dimensions": "9 4",
-      "clickRestriction": "onePerBox",
-      "toggleClick": "true",
-      "showFlip": "false",
-      "showUndo": "false",
-      "shape": "circle 12 black red true",
-      "cycleTimer": "tct"
+    {
+      "name": "Scored middle",
+      "code": "sm",
+      "type": "counter"
     },
-    { "name": "Feeder Count<br>(Fed another bot)",
-      "code": "tfc",
-      "type": "counter",
-      "cycleTimer": "tct"
+    {
+      "name": "Scored low",
+      "code": "sl",
+      "type": "counter"
     },
-    { "name": "Was Fed<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
+    {
+      "name": "Pieces scored",
+      "code": "tps",
+      "type": "radio",
+      "choices": {
+        "o": "Cones<br>",
+        "u": "Cubes<br>",
+        "b": "Both<br>",
+        "x": "None"
+      },
+      "defaultValue": "x"
     },
-    { "name": "Was Defended",
-      "code": "wd",
-      "type": "bool"
-    },
-    { "name": "Who Defended this bot",
-      "code": "who",
-      "type": "text"
-    },
-    { "name": "Smart Placement<br>(creates Links)",
-      "code": "lnk",
+    { "name": "Human Player used",
+      "code": "hp",
       "type": "bool"
     },
     { "name": "Floor Pickup",
