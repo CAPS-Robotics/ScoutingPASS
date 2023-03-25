@@ -23,7 +23,8 @@ var options = {
 
 // Must be filled in: e=event, m=match#, l=level(q,qf,sf,f), t=team#, r=robot(r1,r2,b1..), s=scouter
 //var requiredFields = ["e", "m", "l", "t", "r", "s", "as"];
-var requiredFields = ["e", "m", "l", "r", "s", "as"];
+//var requiredFields = ["e", "m", "l", "r", "s", "as"];
+var requiredFields = ["e", "m", "r"];
 
 function addTimer(table, idx, name, data) {
   var row = table.insertRow(idx);
@@ -620,7 +621,8 @@ function addElement(table, idx, data) {
     idx = addText(table, idx, name, data);
   } else if ((data.type == 'level') ||
     (data.type == 'radio') ||
-    (data.type == 'robot')
+    (data.type == 'robot') ||
+    (data.type == 'startpos')
   ) {
     idx = addRadio(table, idx, name, data);
   } else if ((data.type == 'match') ||
@@ -801,7 +803,7 @@ function resetRobot() {
   }
 }
 
-
+/*
 function getLevel() {
   if (document.getElementById("input_l_qm").checked) {
     return "qm";
@@ -824,6 +826,7 @@ function validateLevel() {
     return false
   }
 }
+*/
 
 function validateData() {
   var ret = true
@@ -836,10 +839,10 @@ function validateData() {
         ret = false
       }
     } else if (rf == "l") {
-      if (!validateLevel()) {
-        errStr += rf + " "
-        ret = false
-      }
+      //if (!validateLevel()) {
+      //  errStr += rf + " "
+      //  ret = false
+      //}
       // Normal validation (length <> 0)
     } else if (document.getElementById("input_" + rf).value == "[]") {
         errStr += rf + " ";
@@ -1270,7 +1273,7 @@ function getCurrentTeamNumberFromRobot() {
 }
 
 function getCurrentMatchKey() {
-  return document.getElementById("input_e").value + "_" + getLevel() + document.getElementById("input_m").value;
+  return document.getElementById("input_e").value + "_" + document.getElementById("input_m").value;
 }
 
 function getCurrentMatch() {

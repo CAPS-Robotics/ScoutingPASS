@@ -4,30 +4,12 @@ var config_data = `
   "page_title": "Charged Up",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
-      "code": "s",
-      "type": "scouter",
-      "size": 5,
-      "maxSize": 5,
-      "required": "true"
-    },
     { "name": "Event",
       "code": "e",
       "type": "event",
       "defaultValue": "2023ilch",
       "required": "true",
       "disabled": "true"
-    },
-    { "name": "Match Level",
-      "code": "l",
-      "type": "level",
-      "choices": {
-        "qm": "Quals<br>",
-        "de": "Double Elimination<br>",
-        "f": "Finals"
-      },
-      "defaultValue": "qm",
-      "required": "true"
     },
     { "name": "Match #",
       "code": "m",
@@ -57,10 +39,12 @@ var config_data = `
     },
     { "name": "Auto Start Position",
       "code": "as",
-      "type": "clickable_image",
-      "filename": "2023/field_image.png",
-      "clickRestriction": "one",
-      "shape": "circle 5 black red true"
+      "type": "startpos",
+      "choices": {
+        "lz": "Loading zone side<br>",
+        "c": "Center<br>",
+        "st": "Scoring table side"
+      }
     }
   ],
   "auton": [
