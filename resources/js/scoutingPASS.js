@@ -806,7 +806,6 @@ function resetRobot() {
   }
 }
 
-/*
 function getLevel() {
   if (document.getElementById("input_l_qm").checked) {
     return "qm";
@@ -829,7 +828,6 @@ function validateLevel() {
     return false
   }
 }
-*/
 
 function validateData() {
   var ret = true
@@ -1276,7 +1274,7 @@ function getCurrentTeamNumberFromRobot() {
 }
 
 function getCurrentMatchKey() {
-  return document.getElementById("input_e").value + "_" + document.getElementById("input_m").value;
+  return document.getElementById("input_e").value + "_" + getLevel() + document.getElementById("input_m").value;
 }
 
 function getCurrentMatch() {

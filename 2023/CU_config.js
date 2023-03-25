@@ -11,6 +11,18 @@ var config_data = `
       "required": "true",
       "disabled": "true"
     },
+    { "name": "Match Level",
+      "code": "l",
+      "gsCol": "level",
+      "type": "level",
+      "choices": {
+        "qm": "Quals<br>",
+        "de": "Double Elimination<br>",
+        "f": "Finals"
+      },
+      "defaultValue": "qm",
+      "required": "true"
+    },
     { "name": "Match #",
       "code": "m",
       "type": "match",
