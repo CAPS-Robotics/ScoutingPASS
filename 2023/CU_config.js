@@ -7,7 +7,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023ilch",
+      "defaultValue": "2023ksla",
       "required": "true",
       "disabled": "true"
     },
